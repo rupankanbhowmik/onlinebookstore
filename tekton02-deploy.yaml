@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pet-clinic-tekton
+  name: onlinebookstore-tekton
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: clinic
+      app: onlinebookstore
   template:
     metadata:
       labels:
-        app: clinic
+        app: onlinebookstore
     spec:
       containers:
-      - name: pet-clinic
-        image: gangadhariy/tekton:latest
+      - name: onlinebookstore
+        image: rony399/openshift-devops:latest
         ports:
         - containerPort: 8080
 
